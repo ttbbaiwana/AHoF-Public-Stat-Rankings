@@ -398,6 +398,14 @@ function renderTable() {
 
     const th = document.createElement("th");
     th.textContent = h;
+
+    if (h === "Death") {
+      th.title = "Does not include practice deaths. This number shows the number of real attempts on the avoidance.";
+    }
+
+    if (h === "Time") {
+      th.title = "Includes practice time. This number shows the total amount of playtime spent to achieve the player's first clear.";
+    }
     
     let columnKey = null;
     
